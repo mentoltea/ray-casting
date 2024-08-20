@@ -1,0 +1,13 @@
+{
+    "compiler" : "gcc",
+    "format" : ".c",   
+    "indir" : "./",
+    "outdir" : "bin/",
+    "target" : "main.exe",
+    "cpp_source" : [
+        "vector",
+        "main"
+    ],
+    "cflags" : "",
+    "libs" : "-lraylib -lopengl32 -lgdi32 -lwinmm"
+}

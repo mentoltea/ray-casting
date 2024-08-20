@@ -59,7 +59,7 @@ int main(int argc, char** argv) {
     InitWindow(WINX, WINY, "Ray casting");
     SetTargetFPS(60);
     float hview_angle = 50;
-    float delta = 1;
+    float delta = 0.2;
     int N = 2*hview_angle/delta + 1 + 2;
     int limit = 200000;
 
@@ -117,7 +117,7 @@ int main(int argc, char** argv) {
         BeginDrawing();
         ClearBackground((Color){50,50,50,255});
 
-        DrawFPS(0, 0);
+        
 
         // DrawLineEx(player.point, pts[1], 1, (Color){120,120,120,255});
         // DrawLineEx(pts[1], pts[N-1], 1, (Color){120,120,120,255});
@@ -125,6 +125,7 @@ int main(int argc, char** argv) {
         DrawTriangleFan(pts, N, (Color){120,120,120,255});
         // DrawTriangle(pts[0], pts[1], pts[N-1], (Color){120,120,120,255});
         // printf("%f %f | %f %f | %f %f\n", player.point.x, player.point.y, pts[0].x, pts[0].y, pts[N-1].x, pts[N-1].y);
+        DrawFPS(0, 0);
         EndDrawing();
     }
     CloseWindow();
